@@ -132,17 +132,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     });
 });
 
-// Mobile menu functionality
-document.querySelector('.mobile-menu-btn').addEventListener('click', function () {
-    document.querySelector('.nav-links').classList.toggle('active');
-});
-
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', function () {
-        document.querySelector('.nav-links').classList.remove('active');
-    });
-});
+// Mobile menu functionality will be initialized in main DOMContentLoaded below
 
 // Event listeners
 document.getElementById('downloadResumeBtn').addEventListener('click', downloadResume);
@@ -355,7 +345,48 @@ function requestAnimationUpdate() {
 }
 
 // Initialize everything when DOM is loaded
+// Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function () {
+    // Mobile menu functionality
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (mobileMenuBtn && navLinks) {
+        mobileMenuBtn.addEventListener('click', function () {
+            navLinks.classList.toggle('active');
+            
+            // Toggle icon between bars and times
+            const icon = this.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function () {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!mobileMenuBtn.contains(e.target) && !navLinks.contains(e.target)) {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    }
+    
     // Add entrance animations to key elements
     const heroContent = document.querySelector('.hero-content h1');
     if (heroContent) {
@@ -389,4 +420,16 @@ if (revealPhoneBtn && phoneNumberSpan) {
         phoneNumberSpan.classList.add('phone-revealed');
         revealPhoneBtn.style.display = 'none';
     });
+}
+
+
+// Certificate scrolling functionality
+function scrollCertificates(provider, scrollAmount) {
+    const scrollContainer = document.getElementById(`${provider}-scroll`);
+    if (scrollContainer) {
+        scrollContainer.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    }
 }

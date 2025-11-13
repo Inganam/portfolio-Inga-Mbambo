@@ -299,6 +299,25 @@ nav {
     display: flex;
     list-style: none;
     gap: 2rem;
+    transition: all 0.3s ease;
+}
+
+/* Desktop navigation - always visible on large screens */
+@media (min-width: 769px) {
+    .nav-links {
+        display: flex !important;
+        position: static !important;
+        flex-direction: row !important;
+        background: transparent !important;
+        padding: 0 !important;
+        transform: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .mobile-menu-btn {
+        display: none !important;
+    }
 }
 
 .nav-links a {
@@ -367,13 +386,6 @@ nav {
 
 .mobile-menu-btn.active {
     background: rgba(59, 130, 246, 0.3);
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Mobile Styles */
@@ -1394,16 +1406,39 @@ section {
 @media (max-width: 768px) {
     .certificate-card {
         width: 100%;
+        max-width: 100%;
         margin-bottom: 20px;
     }
 
+    .certificate-image {
+        height: 180px !important;
+    }
+
+    .certificate-image iframe {
+        width: 100%;
+        height: 100%;
+    }
+
     .certificates-scroll {
-        flex-direction: column;
-        overflow-x: visible;
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: visible;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        padding: 20px 5px;
+    }
+
+    .certificate-card {
+        scroll-snap-align: start;
+        min-width: 280px;
+        width: 280px;
     }
 
     .scroll-button {
-        display: none;
+        display: flex !important;
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
     }
 }
 
@@ -1694,10 +1729,6 @@ section {
 
     .hero-content h1 {
         font-size: 2.5rem;
-    }
-
-    .nav-links {
-        display: none;
     }
 
     .section-title {
@@ -2314,4 +2345,189 @@ container {
 .reveal-btn:hover {
     background: var(--accent-blue);
     color: var(--white);
+}
+
+/* 
+===== IMPROVED MOBILE RESPONSIVENESS ===== */
+
+/* Extra Small Mobile (320px - 480px) */
+@media (max-width: 480px) {
+
+    /* Hero adjustments */
+    .hero {
+        padding: 100px 10px 50px;
+        min-height: auto;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.6rem !important;
+    }
+
+    .hero-content .subtitle {
+        font-size: 1rem !important;
+    }
+
+    .hero-description {
+        font-size: 0.9rem !important;
+    }
+
+    .profile-photo {
+        width: 200px !important;
+        height: 250px !important;
+    }
+
+    /* Navigation */
+    nav {
+        padding: 0.6rem 0.8rem;
+    }
+
+    .logo img {
+        width: 120px !important;
+    }
+
+    /* Sections */
+    section {
+        padding: 30px 10px !important;
+    }
+
+    .section-title {
+        font-size: 1.6rem !important;
+    }
+
+    /* Cards - Make them fit properly */
+    .project-card,
+    .skill-card,
+    .experience-item,
+    .certificate-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .project-card img {
+        height: 120px !important;
+    }
+
+    /* Certificate specific - horizontal scrolling */
+    .certificate-card {
+        min-width: 260px !important;
+        width: 260px !important;
+        max-width: 260px !important;
+    }
+
+    .certificate-image {
+        height: 140px !important;
+    }
+
+    .certificate-image iframe {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .certificate-content {
+        padding: 10px !important;
+    }
+
+    .certificate-title {
+        font-size: 0.95rem !important;
+    }
+
+    .certificates-scroll {
+        gap: 15px !important;
+    }
+
+    .scroll-button {
+        width: 26px !important;
+        height: 26px !important;
+        font-size: 0.85rem !important;
+    }
+
+    /* Contact form */
+    .contact-form {
+        padding: 1rem !important;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.8rem 1rem !important;
+        font-size: 0.95rem !important;
+    }
+
+    /* Buttons */
+    .btn-primary,
+    .btn-secondary {
+        padding: 0.8rem 1rem !important;
+        font-size: 0.9rem !important;
+    }
+
+    /* Social links */
+    .social-links a {
+        width: 38px !important;
+        height: 38px !important;
+        font-size: 1rem !important;
+    }
+}
+
+/* Ensure nav-links work on mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed !important;
+        top: 70px !important;
+        left: 0 !important;
+        width: 100% !important;
+        background: rgba(15, 23, 42, 0.98) !important;
+        backdrop-filter: blur(20px) !important;
+        flex-direction: column !important;
+        padding: 1.5rem !important;
+        transform: translateY(-150%) !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transition: all 0.3s ease !important;
+        z-index: 999 !important;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+    }
+
+    .nav-links.active {
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .nav-links li {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 1rem;
+        text-align: center;
+        font-size: 1.1rem;
+        border-radius: 8px;
+    }
+
+    .mobile-menu-btn {
+        display: flex !important;
+        z-index: 1001;
+    }
+}
+
+
+/* Ensure scroll buttons are visible on desktop */
+@media (min-width: 769px) {
+    .scroll-button {
+        display: flex !important;
+    }
+
+    .certificates-scroll {
+        overflow-x: auto;
+        flex-direction: row;
+    }
 }
