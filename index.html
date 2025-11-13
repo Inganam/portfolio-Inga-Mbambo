@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inga Mbambo - Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <body>
+    <!-- Advanced Background with Moving Elements -->
+    <div class="animated-bg">
+        <div class="orb orb1"></div>
+        <div class="orb orb2"></div>
+        <div class="orb orb3"></div>
+        <!-- Grid Pattern -->
+        <div class="grid-pattern"></div>
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo"><img src="pflogo.png" alt="logo" width="200" height="50"></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Notification -->
+    <div id="notification" class="notification">
+        <i class="fas fa-check"></i>
+        <span id="notificationText">Success!</span>
+    </div>
+
+    <!-- Home -->
+    <section id="home" class="hero">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <h1>Welcome! I'm Inga Mbambo</h1>
+                <p class="subtitle">Aspiring Systems Analyst & Tech Enthusiast</p>
+                <p class="hero-description">Welcome to my professional portfolio! I'm a passionate Systems Support Associate with hands-on experience in technology-driven solutions, currently advancing my skills in systems analysis and AI applications.</p>
+                
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn-primary"><i class="fas fa-rocket"></i> View My Projects</a>
+                    <button id="downloadResumeBtn" class="btn-secondary">
+                        <i class="fas fa-download"></i> Download Resume
+                    </button>
+                </div>
+            </div>
+            <div class="profile-section">
+                <div class="profile-photo">
+                <img src="profile.png" alt="Inga Mbambo Profile Photo">
+                </div>
+                <h3>Inga Mbambo</h3>
+                <p>Systems Support Associate</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/inga-mbambo-57289b231" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Inganam" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:ingambambo2004@icloud.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about">
+        <div class="section-header">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">Get to know my journey and aspirations</p>
+        </div>
+        <div class="about-content">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>My Background</h3>
+                    <p>I am a dedicated Systems Support Associate with a strong passion for technology, problem-solving, and professional growth. My journey in technology began with a curiosity for how systems work and has evolved into a commitment to building efficient, user-centered solutions.</p>
+                    
+                    <h3>Career Aspirations</h3>
+                    <p>My goal is to advance into a Systems Analyst role where I can contribute to the design, optimization, and support of impactful systems that drive organizational success. I'm particularly interested in AI integration and system optimization.</p>
+                    
+                    <h3>Interests & Values</h3>
+                    <p>I believe in continuous learning, ethical technology practices, and collaborative problem-solving. When I'm not coding, I enjoy exploring new technologies, participating in tech communities, and staying updated with industry trends.</p>
+                </div>
+                <div class="about-highlights">
+                    <div class="highlight-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h4>Education</h4>
+                        <p>Marketing Management</p>
+                        <p>HC: Economic and Man Sciences</p>
+                        <p>Bcom in Business Informatics (Current)</p>
+                    </div>
+                    <div class="highlight-card">
+                        <i class="fas fa-briefcase"></i>
+                        <h4>Experience</h4>
+                        <p>2+ years in systems support and development</p>
+                    </div>
+                    <div class="highlight-card">
+                        <i class="fas fa-certificate"></i>
+                        <h4>Certifications</h4>
+                        <p>8+ professional certifications in tech and AI</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+    <div class="section-header">
+        <h2 class="section-title">Skills & Expertise</h2>
+        <p class="section-subtitle">Technical and professional capabilities</p>
+    </div>
+
+    <div class="skills-grid">
+        <!-- Technical Skills -->
+        <div class="skill-card">
+        <h4><i class="fas fa-code"></i> Technical Skills</h4>
+
+        <div class="skill-item">
+            <div class="skill-header">
+                <span>Python Programming</span>
+                <span class="skill-percentage">75%</span>
+            </div>
+            <div class="skill-bar">
+            <div class="skill-progress" style="width: 75%"></div>
+            </div>
+        </div>
+
+        <div class="skill-item">
+            <div class="skill-header">
+                <span>HTML/CSS</span>
+                <span class="skill-percentage">85%</span>
+            </div>
+            <div class="skill-bar">
+            <div class="skill-progress" style="width: 85%"></div>
+            </div>
+        </div>
+
+        <div class="skill-item">
+            <div class="skill-header">
+                <span>AI Applications</span>
+                <span class="skill-percentage">70%</span>
+            </div>
+            <div class="skill-bar">
+            <div class="skill-progress" style="width: 70%"></div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Professional Skills -->
+        <div class="skill-card">
+        <h4><i class="fas fa-users"></i> Professional Skills</h4>
+        <ul class="skills-list">
+            <li><i class="fas fa-check"></i> Problem Solving & Analytical Thinking</li>
+            <li><i class="fas fa-check"></i> Team Collaboration & Communication</li>
+            <li><i class="fas fa-check"></i> Adaptability & Continuous Learning</li>
+        </ul>
+        </div>
+    </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+    <div class="section-header">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">Highlights of my work</p>
+    </div>
+    <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+        <a href="https://poe.com/NETFUSEBOT" target="_blank">
+            <img src="netfuseChatbot.jpg" alt="Netfuse-chatbot">
+        </a>
+        <div class="project-content">
+            <h3 class="project-title">
+            <a href="https://poe.com/NETFUSEBOT" target="_blank" class="project-link">AI Chatbot</a>
+            </h3>
+            <p>Developed an intelligent conversational AI system using natural language processing techniques. It features user-friendly interactions and showcases backend integration skills.</p>
+            <div class="tech-stack">
+            <span class="tech-tag">No-Code</span>
+            <span class="tech-tag">NLP</span>
+            <span class="tech-tag">API</span>
+            <span class="tech-tag">Poe</span>
+            </div>
+        </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+        <a href="https://interactive-sentimen-uvnd.bolt.host/" target="_blank">
+            <img src="Sentiment analysis image.jpg" alt="Sentiment Analysis">
+            </a>
+            <div class="project-content">
+        <h3 class="project-title">
+        <a href="https://interactive-sentimen-uvnd.bolt.host/" target="_blank" class="project-link">Sentiment Analysis Tool</a>
+        </h3>
+        <p>Developed with a no-code tool to analyze social media text and provide insights on customer opinions. Showcases skills in text processing and visualization workflows.</p>
+        <div class="tech-stack">
+        <span class="tech-tag">No-Code</span>
+        <span class="tech-tag">Text Analysis</span>
+        <span class="tech-tag">Visualization</span>
+        <span class="tech-tag">Bolt</span>
+        </div>
+    </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+    <a href="https://umhlanga-project.netlify.app/" target="_blank">
+        <img src="umhlanga restaurant.png" alt="Umhlanga Coast Restaurant">
+    </a>
+    <div class="project-content">
+        <h3 class="project-title">
+        <a href="https://umhlanga-project.netlify.app/" target="_blank" class="project-link">Umhlanga Coast Restaurant</a>
+        </h3>
+        <p>Responsive beachside restaurant website focused on menus and booking pages. Built with modern frontend design, without backend integration.</p>
+        <div class="tech-stack">
+        <span class="tech-tag">HTML</span>
+        <span class="tech-tag">CSS</span>
+        <span class="tech-tag">Frontend</span>
+        </div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+        <div class="section-header">
+            <h2 class="section-title">Experience</h2>
+            <p class="section-subtitle">Professional journey and accomplishments</p>
+        </div>
+        <div class="experience-grid">
+            <div class="experience-item">
+                <h4>Systems Support Associate</h4>
+                <p class="experience-company">Capaciti</p>
+                <p class="experience-duration">2025 - Present</p>
+                <p class="experience-description">Applying artificial intelligence to enhance IT solutions while actively pursuing professional development to grow expertise in emerging technologies. Collaborating with cross-functional teams to optimize system performance and user experience.</p>
+            </div>
+            <div class="experience-item">
+                <h4>Systems Development Intern</h4>
+                <p class="experience-company">CSG Resource</p>
+                <p class="experience-duration">2024 - 2025</p>
+                <p class="experience-description">Gained foundational skills in systems development methodologies, HTML, CSS, Python programming, and cybersecurity principles. Participated in team projects and contributed to system documentation and testing processes.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- Certifications -->
+  <section id="certifications">
+    <div class="section-header">
+      <h2 class="section-title">Certifications</h2>
+      <p class="section-subtitle">Professional credentials in technology and AI</p>
+    </div>
+    
+    <!-- CAPACITI Certificates -->
+    <h3 class="provider-heading">CAPACITI</h3>
+    <div class="certificates-container">
+      <button class="scroll-button scroll-left" onclick="scrollCertificates('CAPACITI', -300)">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      
+      <div id="CAPACITI-scroll" class="certificates-scroll">
+        <!-- AI Essentials Certificate -->
+        <div class="certificate-card CAPACITI-cert">
+          <div class="certificate-image" style="height:200px; padding:0; position:relative;">
+        <iframe src="Coursera (AI Essential).pdf" width="100%" height="100%" style="border:none;"></iframe>
+        <a href="Coursera (AI Essential).pdf" target="_blank" class="certificate-click-layer" aria-label="View full certificate"></a>
+      </div>
+
+          <div class="certificate-content">
+            <h3 class="certificate-title">AI Essentials</h3>
+            <div class="certificate-provider">
+              <i class="fas fa-building"></i> Intel
+            </div>
+            <div class="certificate-date">
+              <i class="fas fa-calendar-alt"></i> August 4, 2025
+            </div>
+            <a href="https://coursera.org/verify/VSIR3092UN83" class="certificate-link" target="_blank">
+              Verify Certificate
+            </a>
+          </div>
+        </div>
+        
+        <!-- AI For Everyone Certificate -->
+        <div class="certificate-card CAPACITI-cert">
+          <div class="certificate-image" style="height:200px; padding:0; position:relative;">
+        <iframe src="Coursera (AI for everyone).pdf" width="100%" height="100%" style="border:none;"></iframe>
+        <a href="Coursera (AI for everyone).pdf" target="_blank" class="certificate-click-layer" aria-label="View full certificate"></a>
+      </div>
+          <div class="certificate-content">
+            <h3 class="certificate-title">AI For Everyone</h3>
+            <div class="certificate-provider">
+              <i class="fas fa-building"></i> DeepLearning.AI
+            </div>
+            <div class="certificate-date">
+              <i class="fas fa-calendar-alt"></i> July 26, 2025
+            </div>
+            <a href="https://coursera.org/verify/QN3IPNYBS5CZ" class="certificate-link" target="_blank">
+              Verify Certificate
+            </a>
+          </div>
+        </div>
+        
+        <!-- Generative AI with LLM Certificate -->
+        <div class="certificate-card CAPACITI-cert">
+          <div class="certificate-image" style="height:200px; padding:0; position:relative;">
+        <iframe src="Coursera (Generative Ai with LLM).pdf" width="100%" height="100%" style="border:none;"></iframe>
+        <a href="Coursera (Generative Ai with LLM).pdf" target="_blank" class="certificate-click-layer" aria-label="View full certificate"></a>
+      </div>
+          <div class="certificate-content">
+            <h3 class="certificate-title">Generative AI with LLM</h3>
+            <div class="certificate-provider">
+              <i class="fas fa-building"></i> AWS & DeepLearning.AI
+            </div>
+            <div class="certificate-date">
+              <i class="fas fa-calendar-alt"></i> August 18, 2025
+            </div>
+            <a href="https://coursera.org/verify/xNAQL80F68MM" class="certificate-link" target="_blank">
+              Verify Certificate
+            </a>
+          </div>
+        </div>
+        
+        <!-- Introduction to Generative AI Certificate -->
+        <div class="certificate-card CAPACITI-cert">
+          <div class="certificate-image" style="height:200px; padding:0; position:relative;">
+        <iframe src="Coursera (Introduction to generative AI).pdf" width="100%" height="100%" style="border:none;"></iframe>
+        <a href="Coursera (Introduction to generative AI).pdf" target="_blank" class="certificate-click-layer" aria-label="View full certificate"></a>
+      </div>
+          <div class="certificate-content">
+            <h3 class="certificate-title">Intro to Generative AI</h3>
+            <div class="certificate-provider">
+              <i class="fas fa-building"></i> Google Cloud
+            </div>
+            <div class="certificate-date">
+              <i class="fas fa-calendar-alt"></i> August 1, 2025
+            </div>
+            <a href="https://coursera.org/verify/227N1STUNN2L" class="certificate-link" target="_blank">
+              Verify Certificate
+            </a>
+          </div>
+        </div>
+      </div>
+      <button class="scroll-button scroll-right" onclick="scrollCertificates('CAPACITI', 300)">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+    
+    <!-- CSG Resource Certificates -->
+    <h3 class="provider-heading">CSG Resourcing</h3>
+    <div class="certificates-container">
+      <button class="scroll-button scroll-left" onclick="scrollCertificates('csg', -300)">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      
+      <div id="csg-scroll" class="certificates-scroll">
+        <!-- CSS Essentials Certificate -->
+        <div class="certificate-card csg-cert">
+          <div class="certificate-image" style="height:200px; padding:0; position:relative;">
+        <iframe src="Cisco (CSSEssentials).pdf" width="100%" height="100%" style="border:none;"></iframe>
+        <a href="Cisco (CSSEssentials).pdf" target="_blank" class="certificate-click-layer" aria-label="View full certificate"></a>
+      </div>
+
+          <div class="certificate-content">
+            <h3 class="certificate-title">CSS Essentials</h3>
+            <div class="certificate-provider">
+              <i class="fas fa-building"></i> Cisco Networking Academy
+            </div>
+            <div class="certificate-date">
+              <i class="fas fa-calendar-alt"></i> 2025
+            </div>
+            <a href="https://www.credly.com/badges/553ae379-2d43-4ecd-bf2c-82d1ff06b0cf/public_url" class="certificate-link">
+              Verify Certificate
+            </a>
+          </div>
+        </div>
+        
+        <!-- Cybersecurity Certificate -->
+        <div class="certificate-card csg-cert">
+          <div class="certificate-image" style="height:200px; padding:0; position:relative;">
+        <iframe src="Cisco (Cybersecurity).pdf" width="100%" height="100%" style="border:none;"></iframe>
+        <a href="Cisco (Cybersecurity).pdf" target="_blank" class="certificate-click-layer" aria-label="View full certificate"></a>
+      </div>
+          <div class="certificate-content">
+            <h3 class="certificate-title">Introduction to Cybersecurity</h3>
+            <div class="certificate-provider">
+              <i class="fas fa-building"></i> Cisco Networking Academy
+            </div>
+            <div class="certificate-date">
+              <i class="fas fa-calendar-alt"></i> 2025
+            </div>
+            <a href="https://www.credly.com/badges/db675466-c3ac-4511-acdf-b03cef846926/public_url" class="certificate-link">
+              Verify Certificate
+            </a>
+          </div>
+        </div>
+        
+        <!-- HTML Essentials Certificate -->
+        <div class="certificate-card csg-cert">
+          <div class="certificate-image" style="height:200px; padding:0; position:relative;">
+        <iframe src="Cisco (HTMLEssentials).pdf" width="100%" height="100%" style="border:none;"></iframe>
+        <a href="Cisco (HTMLEssentials).pdf" target="_blank" class="certificate-click-layer" aria-label="View full certificate"></a>
+      </div>
+          <div class="certificate-content">
+            <h3 class="certificate-title">HTML Essentials</h3>
+            <div class="certificate-provider">
+              <i class="fas fa-building"></i> Cisco Networking Academy
+            </div>
+            <div class="certificate-date">
+              <i class="fas fa-calendar-alt"></i> May 05, 2025
+            </div>
+            <a href="https://www.credly.com/badges/1ce6f0c3-f1b2-456c-8d9c-80fa8b76f995/public_url" class="certificate-link">
+              Verify Certificate
+            </a>
+          </div>
+        </div>
+        
+        <!-- Python Essentials Certificate -->
+        <div class="certificate-card csg-cert">
+          <div class="certificate-image" style="height:200px; padding:0; position:relative;">
+        <iframe src="Cisco (PythonEssentials1).pdf" width="100%" height="100%" style="border:none;"></iframe>
+        <a href="Cisco (PythonEssentials1).pdf" target="_blank" class="certificate-click-layer" aria-label="View full certificate"></a>
+      </div>
+          <div class="certificate-content">
+            <h3 class="certificate-title">Python Essentials 1</h3>
+            <div class="certificate-provider">
+              <i class="fas fa-building"></i> Cisco Networking Academy
+            </div>
+            <div class="certificate-date">
+              <i class="fas fa-calendar-alt"></i> Dec 13, 2024
+            </div>
+            <a href="https://www.credly.com/badges/bea69224-19da-4ea9-b4ff-27cc6161e0df/public_url" class="certificate-link">
+              Verify Certificate
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <button class="scroll-button scroll-right" onclick="scrollCertificates('csg', 300)">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="section-header">
+            <h2 class="section-title">Contact Me</h2>
+            <p class="section-subtitle">Let's discuss opportunities and collaborations</p>
+        </div>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:ingambambo2004@icloud.com">ingambambo2004@icloud.com</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p><span id="phoneNumber" class="phone-hidden">+27 ••• ••• ••••</span> <button id="revealPhone" class="reveal-btn">Click to reveal</button></p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <div>
+                        <h4>LinkedIn</h4>
+                        <p><a href="https://www.linkedin.com/in/inga-mbambo-57289b231" target="_blank">Connect with me</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <div>
+                        <h4>GitHub</h4>
+                        <p><a href="https://github.com/Inganam" target="_blank">View my projects</a></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Send me a message</h3>
+
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project or opportunity..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Inga Mbambo</h3>
+                <p>Aspiring Systems Analyst passionate about technology and innovation.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/inga-mbambo-57289b231" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Inganam" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:ingambambo2004@icloud.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Inga Mbambo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="resumeBase64.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
