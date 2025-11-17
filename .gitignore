@@ -1,0 +1,8 @@
+# Unused resume files
+resumeBase64.js
+resume_base64.txt
+resume_base64_chunks.txt
+resume_base64_raw.txt
+
+# IDE
+.vscode/
